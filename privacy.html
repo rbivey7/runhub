@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — RunHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red:    #FF2D2D;
+      --dark:   #0D0D0D;
+      --card:   #141414;
+      --border: #1E1E1E;
+      --muted:  #555;
+      --white:  #F0F0F0;
+      --paper:  #F5F2ED;
+      --ink:    #1A1A1A;
+      --ink2:   #444;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* Grain texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.5;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245,242,237,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ddd;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--red); }
+
+    .nav-back {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--ink2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red); }
+
+    /* Layout */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    /* Header */
+    .page-header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 72px);
+      letter-spacing: 2px;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--ink2);
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 1.5px;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .num {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--red);
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    p {
+      color: var(--ink2);
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+
+    ul li {
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid #e8e5e0;
+      color: var(--ink2);
+      font-weight: 300;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-size: 12px;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 24px 28px;
+      border-radius: 4px;
+      margin: 24px 0;
+    }
+
+    .highlight p {
+      color: rgba(245,242,237,0.75);
+      margin-bottom: 0;
+    }
+
+    .highlight strong {
+      color: var(--paper);
+      font-weight: 500;
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0ddd8;
+      color: var(--ink2);
+      font-weight: 300;
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+    /* Contact */
+    .contact-card {
+      border: 1px solid var(--ink);
+      padding: 24px 28px;
+      border-radius: 4px;
+    }
+
+    .contact-card .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      color: var(--ink);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-card a:hover {
+      color: var(--red);
+      border-color: var(--red);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #ddd;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--ink2);
+      letter-spacing: 0.5px;
+    }
+
+    footer a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .container { padding: 40px 20px 80px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://rbivey7.github.io/runhub" class="nav-logo">RUN<span>HUB</span></a>
+  <a href="https://rbivey7.github.io/runhub" class="nav-back">← Back to RunHub</a>
+</nav>
+
+<div class="container">
+
+  <div class="page-header">
+    <p class="eyebrow">Legal Document</p>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective: February 24, 2026</span>
+      <span>Last updated: February 24, 2026</span>
+      <span>App: RunHub for iOS</span>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="num">01 —</span> Overview</h2>
+    <p>RunHub ("we," "our," or "the app") is a personal running training app built for iOS. This Privacy Policy explains what data we collect, why we collect it, how it is stored, and your rights regarding that data.</p>
+    <p>We take privacy seriously. RunHub is designed to help you train — not to monetize your personal data. We do not sell your data to third parties.</p>
+    <div class="highlight">
+      <p><strong>The short version:</strong> RunHub collects only what it needs to function. Your running data stays in your account. We don't sell it, share it for advertising, or use it for anything beyond providing the app's features.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02 —</span> Information We Collect</h2>
+    <p>We collect the following categories of information when you use RunHub:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Examples</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account</strong></td>
+          <td>Google account name, email address, profile photo</td>
+          <td>Authentication via Google Sign-In</td>
+        </tr>
+        <tr>
+          <td><strong>Activity Data</strong></td>
+          <td>Distance, pace, heart rate, elevation, GPS route</td>
+          <td>Imported from Strava, Garmin, Polar, or COROS to power your dashboard</td>
+        </tr>
+        <tr>
+          <td><strong>Training Data</strong></td>
+          <td>Races, personal bests, gear, calendar events</td>
+          <td>User-entered data stored to your account</td>
+        </tr>
+        <tr>
+          <td><strong>Device Data</strong></td>
+          <td>iOS version, device model</td>
+          <td>Crash reporting and compatibility</td>
+        </tr>
+        <tr>
+          <td><strong>Subscription</strong></td>
+          <td>Purchase receipts, entitlement status</td>
+          <td>Verifying Pro subscription via RevenueCat</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do not collect precise location data beyond what is already stored in activity files imported from connected services (Strava, Garmin, etc.).</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03 —</span> Third-Party Integrations</h2>
+    <p>RunHub connects to external services to import your training data. These connections are optional and can be disconnected at any time from within the app.</p>
+
+    <ul>
+      <li><strong>Strava</strong> — We use the Strava API to import your activity history. We request read-only access. We do not post to Strava on your behalf. Governed by <a href="https://www.strava.com/legal/privacy" target="_blank">Strava's Privacy Policy</a>.</li>
+      <li><strong>Garmin Connect</strong> — Heart rate, GPS, and power data synced from Garmin devices. Read-only access. Governed by <a href="https://www.garmin.com/en-US/privacy/app-privacy/" target="_blank">Garmin's Privacy Policy</a>.</li>
+      <li><strong>Polar Flow</strong> — Workout data from Polar devices. Read-only access. Governed by <a href="https://www.polar.com/en/legal/privacy-notice" target="_blank">Polar's Privacy Notice</a>.</li>
+      <li><strong>COROS</strong> — Activity data from COROS watches. Read-only access. Governed by <a href="https://www.coros.com/privacy.html" target="_blank">COROS's Privacy Policy</a>.</li>
+      <li><strong>Google Calendar</strong> — With your permission, RunHub can push training events to a dedicated "RunHub" calendar in your Google account. Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>RevenueCat</strong> — Manages subscription purchases and receipt validation. Governed by <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">04 —</span> How We Store Your Data</h2>
+    <p>RunHub uses a PostgreSQL database hosted on <strong>Railway</strong> (a cloud infrastructure provider) to store your account and training data. Data is transmitted over encrypted HTTPS connections.</p>
+    <p>Authentication tokens and sensitive credentials are stored locally on your device using iOS Keychain (via Flutter Secure Storage) and are never transmitted to our servers.</p>
+    <p>We do not store your Google account password or credentials — authentication is handled entirely by Google Sign-In (OAuth 2.0).</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05 —</span> Data Sharing</h2>
+    <p>We do not sell, rent, or trade your personal information. Your data may be shared only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers</strong> — Infrastructure providers (Railway) who host our backend, strictly to operate the service</li>
+      <li><strong>Legal requirements</strong> — If required by law, court order, or governmental authority</li>
+      <li><strong>Business transfer</strong> — In the event of a merger or acquisition, data may transfer to the new entity under the same privacy terms</li>
+    </ul>
+    <p>We do not share your data with advertisers or use it for advertising purposes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06 —</span> Your Rights</h2>
+    <p>You have the following rights regarding your data:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the data we hold about you</li>
+      <li><strong>Deletion</strong> — Request deletion of your account and all associated data</li>
+      <li><strong>Portability</strong> — Export your training data in a common format</li>
+      <li><strong>Disconnect integrations</strong> — Remove connections to Strava, Garmin, Polar, or COROS at any time within the app</li>
+      <li><strong>Opt out of calendar sync</strong> — Disable Google or Apple Calendar sync at any time in profile settings</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07 —</span> Children's Privacy</h2>
+    <p>RunHub is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08 —</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we will notify users within the app. Your continued use of RunHub after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09 —</span> Contact</h2>
+    <p>If you have questions about this Privacy Policy or want to exercise your data rights, please reach out:</p>
+    <div class="contact-card">
+      <p class="label">Developer</p>
+      <p><strong>Robert Ivey</strong><br>
+      RunHub for iOS<br>
+      <a href="mailto:rbivey7@gmail.com">rbivey7@gmail.com</a><br>
+      <a href="https://rbivey7.github.io/runhub">rbivey7.github.io/runhub</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 RunHub · Developed by Robert Ivey · <a href="https://rbivey7.github.io/runhub">runhub</a></p>
+</footer>
+
+</body>
+</html>
